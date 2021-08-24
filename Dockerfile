@@ -15,9 +15,9 @@ ENV PATH=/root/.local:$PATH
 
 WORKDIR /app
 
-COPY ./config /etc/radicale/config
 COPY ./entrypoint.sh .
 
+ENV CONFIG_FILE=/data/config.ini
 ENV USER_FILE=/data/users
 
 VOLUME [ "/data" ]
